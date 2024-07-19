@@ -14,6 +14,7 @@ public class CustomerController(
     [HttpGet]
     public async Task<ActionResult<IList<Customer>>> GetAll()
     {
+        logger.LogInformation("Requested GetAll");
         var customers = await customerService.GetAll();
         return Ok(customers.ToList());
     }
