@@ -1,0 +1,42 @@
+@RestApi_HostAddress = http://localhost:5116
+
+GET {{RestApi_HostAddress}}/Customer/
+Accept: application/json
+
+###
+
+POST {{RestApi_HostAddress}}/Customer/
+Content-Type: application/json
+Accept-Language: en-US,en;q=0.5
+{
+    "Firstname": "Alice",
+    "Surname": "Smith"
+}
+
+###
+
+POST {{RestApi_HostAddress}}/Customer/
+Content-Type: application/json
+Accept-Language: en-US,en;q=0.5
+{
+    "Firstname": "John",
+    "Surname": "Rambo"
+}
+
+###
+
+POST {{RestApi_HostAddress}}/Customer/
+Content-Type: application/json
+Accept-Language: en-US,en;q=0.5
+{
+    "Id": 1,
+    "Firstname": "John",
+    "Surname": "Rambo"
+}
+
+###
+
+DELETE {{RestApi_HostAddress}}/Customer/1
+Accept: application/json
+
+###
